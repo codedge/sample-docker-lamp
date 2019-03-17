@@ -11,8 +11,8 @@ RUN sed -i 's|#LoadModule rewrite_module|LoadModule rewrite_module|' /usr/local/
 RUN echo '' > /usr/local/apache2/conf/extra/httpd-vhosts.conf && \
     echo '' > /usr/local/apache2/conf/extra/httpd-ssl.conf
 
-COPY docker/apache/ssl/sds-website.local.dev.crt /usr/local/apache2/conf/server.crt
-COPY docker/apache/ssl/sds-website.local.dev.key /usr/local/apache2/conf/server.key
+COPY docker/apache/ssl/vhost.crt /usr/local/apache2/conf/server.crt
+COPY docker/apache/ssl/vhost.key /usr/local/apache2/conf/server.key
 
 ENV APACHE_LOG_DIR=/usr/local/apache2/logs
 

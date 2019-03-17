@@ -17,3 +17,5 @@ Run the following command to spin up the containers:
 ```bash
 $ docker-compose up -d
 ```
+
+Enter `myproject.localhost` in you browser and see the `index.html`.
